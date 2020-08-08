@@ -8,8 +8,13 @@ router.post("/",async (req,res)=>{
         noOfUsersliked:req.body.noOfUsersliked
     });
     if(course){
-        course = await course.save();
+        //course = await course.save();
+        //console.log("I am working");
         res.send(course)
     }
+})
+router.get("/", async (req, res)=>{
+    //console.log("i am working");
+    res.send("I am working");
 })
 module.exports=router;
